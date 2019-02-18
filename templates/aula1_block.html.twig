@@ -1,0 +1,11 @@
+{% block title %}
+Titulo da aula mobral
+{% endblock %}
+
+{% block name %}Twig - block - extends{% endblock %}
+
+{{ block('title','base.html.twig') }}
+
+{% if block('footer','footer.html.twig') is defined %}
+    {{  block('footer','footer.html.twig') }}
+{% endif %}

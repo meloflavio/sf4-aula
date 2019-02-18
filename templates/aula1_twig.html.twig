@@ -1,0 +1,50 @@
+<html>
+<h1>{{ 'Ola' }}</h1>
+{{ message }}
+<h1>
+    {% for arr in array %}
+        {{ arr }}
+    {% endfor %}
+</h1>
+
+{% set nome = 'Camila' %}
+
+{{ nome }}
+
+<h1>
+    {% set valor  = 1+1 %}
+    {{ valor }}
+</h1>
+
+<h1>
+    {% set array2 = [ '1','2','3']  %}
+    {{ array2[0] }}
+</h1>
+
+{% for i in  0..50 %}
+    {{ i }}
+{% endfor %}
+
+<h1>
+    {{ constant('App\\Controller\\DefaultController::NOME') }}
+</h1>
+
+<h1>
+    {% for i in range(0,10,2) %}
+        {{ i }}
+    {% endfor %}
+</h1>
+
+
+<h1>
+    {% set array3 = [ 'foo','bar','3']  %}
+
+    {% for i in 0..5 %}
+        {{ cycle(array3,i) }}
+    {% endfor %}
+</h1>
+
+{% set var = "1,2,3"|split(',') %}
+<h1>{{ dump(var) }}</h1>
+
+</html>
