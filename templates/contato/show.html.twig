@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contato{% endblock %}
+
+{% block body %}
+    <h1>Contato</h1>
+
+    <table class="table">
+        <tbody>
+        <tr>
+            <th>Id</th>
+            <td>{{ contato.id }}</td>
+        </tr>
+        <tr>
+            <th>Nome</th>
+            <td>{{ contato.nome }}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>{{ contato.email }}</td>
+        </tr>
+        <tr>
+            <th>Mensagem</th>
+            <td>{{ contato.mensagem }}</td>
+        </tr>
+        <tr>
+            <th>Endereço</th>
+            <td>{{ contato.endereco }}</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <div class="navbar navbar-default navbar-fixed-bottom">
+
+        <div class="row col-md-12">
+            <a href="{{ path('contato_index') }}" class="btn btn-info">Voltar a lista</a>
+            <a href="{{ path('contato_edit', {'id': contato.id}) }}" class="btn btn-success">Editar</a>
+            {{ include('contato/_delete_form.html.twig') }}
+            </div>
+    </div>
+
+
+
+{% endblock %}

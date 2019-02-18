@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Contato{% endblock %}
+
+{% block body %}
+    <h1>Edit Contato</h1>
+
+    {{ include('contato/_form.html.twig', {'button_label': 'Atualizar','delete':true}) }}
+
+
+{% endblock %}

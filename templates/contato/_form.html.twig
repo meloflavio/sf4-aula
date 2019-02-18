@@ -1,0 +1,14 @@
+    {{ form_start(form ,{'id': 'form_person_edit'}) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+    <div class="navbar navbar-default">
+
+        <div class="row ">
+            <button class="btn btn-primary" onclick="document.getElementsByName('contato')[0].submit();">{{ button_label|default('Enviar') }}</button>
+
+            <a href="{{ path('contato_index') }}" class="btn btn-info">Voltar para lista</a>
+            {% if delete is defined and delete == true %}
+                {{ include('contato/_delete_form.html.twig') }}
+            {% endif %}
+        </div>
+    </div>
